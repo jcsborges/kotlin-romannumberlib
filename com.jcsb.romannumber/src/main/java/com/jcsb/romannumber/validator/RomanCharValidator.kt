@@ -8,7 +8,7 @@ class RomanCharValidator : IStructureValidator {
 
     companion object {
 
-        val validRoman = arrayOf('I', 'V', 'X', 'L', 'C', 'D', 'M')
+        private val validRoman = arrayOf('I', 'V', 'X', 'L', 'C', 'D', 'M')
 
         fun isValid(romanChar: Char): Boolean {
 

@@ -9,12 +9,11 @@ class RomanCharSmallerPositionValidator : IStructureValidator {
 
         var rtn = true
 
-        if (previousChar == 'I')
-            rtn = currentChar == 'I' || currentChar == 'V' || currentChar == 'X'
-        else if (previousChar == 'X')
-            rtn = currentChar == 'I' || currentChar == 'V' || currentChar == 'X' || currentChar == 'L' || currentChar == 'C'
-        else if (previousChar == 'C')
-            rtn = currentChar == 'I' || currentChar == 'V' || currentChar == 'X' || currentChar == 'L' || currentChar == 'C' || currentChar == 'D' || currentChar == 'M'
+        when (previousChar) {
+            'I' -> rtn = currentChar == 'I' || currentChar == 'V' || currentChar == 'X'
+            'X' -> rtn = currentChar == 'I' || currentChar == 'V' || currentChar == 'X' || currentChar == 'L' || currentChar == 'C'
+            'C' -> rtn = currentChar == 'I' || currentChar == 'V' || currentChar == 'X' || currentChar == 'L' || currentChar == 'C' || currentChar == 'D' || currentChar == 'M'
+        }
 
 
         previousChar = currentChar

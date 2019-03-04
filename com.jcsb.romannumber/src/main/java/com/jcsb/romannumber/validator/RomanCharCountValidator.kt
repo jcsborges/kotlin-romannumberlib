@@ -3,8 +3,8 @@ package com.jcsb.romannumber.validator
 
 class RomanCharCountValidator : IStructureValidator {
 
-    var previousChar: String = ""
-    var count: Int = 0
+    private var previousChar: String = ""
+    private var count: Int = 0
 
     override fun isValid(currentChar: Char): Boolean {
 

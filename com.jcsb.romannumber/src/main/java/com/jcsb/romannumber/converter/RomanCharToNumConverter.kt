@@ -22,10 +22,8 @@ class RomanCharToNumConverter {
             val result = validRomanNumbers.find { c -> c.romanChar == romanChar }
 
 
-            if (result != null)
-                return result.romanNumber
-            else
-                return 0
+            return result?.romanNumber ?: 0
+
 
         }
     }

@@ -4,9 +4,9 @@ class RomanStructureValidator {
 
     companion object {
 
-        var validators = arrayListOf<IStructureValidator>()
+        private var validators = arrayListOf<IStructureValidator>()
 
-        internal fun create() {
+        private fun create() {
 
             validators = arrayListOf()
 
